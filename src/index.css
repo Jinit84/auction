@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+  /* Updated Color Palette */
+  --background: #D2C1B6; /* beige background */
+  --foreground: #1B3C53; /* dark blue text */
+
+  --card: #FFFFFF;
+  --card-foreground: #234C6A;
+
+  --sidebar-bg: #234C6A;
+  --sidebar-foreground: #D2C1B6; /* beige sidebar text */
+
+  --primary: #1B3C53; /* button/navy */
+  --primary-foreground: #FFFFFF; /* white text for buttons */
+
+  --brand: #1B3C53; /* main brand color for buttons */
+  --brand-dark: #234C6A;
+  --brand-light: #456882;
+
+  --accent: #456882; /* cold/sea accent */
+
+  --muted-foreground: #456882; /* cold/sea muted text */
+
+  --border: #234C6A; /* dark border color */
+  --button-bg: #1B3C53;
+  --button-hover: #234C6A;
+  --button-accent: #456882;
+  --button-disabled: #D2C1B6;
+  --button-text: #FFFFFF;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Inter", sans-serif;
+  }
+  #root {
+    width: 100%;
+  }
+}
+
+/* Custom lively homepage animations */
+@keyframes bounce-slow {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-30px); }
+}
+@keyframes bounce-slower {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+.animate-bounce-slow {
+  animation: bounce-slow 3s infinite;
+}
+.animate-bounce-slower {
+  animation: bounce-slower 5s infinite;
+}
